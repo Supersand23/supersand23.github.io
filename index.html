@@ -30,6 +30,8 @@ h1{margin:0;font-size:clamp(64px,10vw,136px);line-height:.92;font-weight:300;let
 .rack a:hover rect,.rack a:hover path,.rack a:hover circle{stroke:var(--akzent)}
 .rack a:hover text{fill:var(--akzent-text)}
 .rack .led{fill:var(--akzent);stroke:none}
+.rack a rect{fill:transparent;pointer-events:all;cursor:pointer}
+.rack a:hover rect{fill:var(--feld)}
 section{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:32px;padding:44px 0 88px;border-top:1.2px solid var(--tinte);scroll-margin-top:12px}
 h2{margin:0;font-size:32px;line-height:1.1;font-weight:300;letter-spacing:-.02em;text-transform:lowercase}
 h2 span{display:block;margin-bottom:8px;color:var(--akzent-text);font-size:13px;letter-spacing:0;font-weight:400}
