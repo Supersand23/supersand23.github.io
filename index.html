@@ -95,7 +95,7 @@ details summary{cursor:pointer}
 .profil img{display:block;width:100%;height:auto;border-radius:8px}
 .profil .gross{max-width:26em;margin:0 0 16px;font-size:25px;line-height:1.28;font-weight:700;letter-spacing:-.02em}
 .profil p{max-width:38em;margin:0 0 12px}
-.lauf{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr) minmax(0,1.1fr);gap:40px}
+.lauf{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1.45fr) minmax(0,1.05fr);gap:40px}
 .lauf h3{margin:0 0 8px;font-size:19px;font-weight:800}
 .lauf dl{margin:0}
 .lauf dl div{padding:10px 0;border-top:1px solid var(--linie)}
@@ -227,7 +227,8 @@ html{scroll-padding-top:68px}
 .detailflaeche{padding:18px 20px}
 }
 @media(min-width:640px) and (max-width:720px){.df-raster{grid-template-columns:1fr}.df-raster .ergebnis{margin:0;padding:10px 12px}}
-.lauf-aktion{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.lauf-aktion{display:flex;flex-direction:column;gap:10px;max-width:360px}
+.lauf-aktion .knopf{display:flex;align-items:center;justify-content:center;width:100%;padding:12px 14px;font-size:16px}
 .haupt a{text-align:center}
 h1{text-wrap:balance}
 .sprachen{display:none;gap:2px}
@@ -423,7 +424,7 @@ while(lauf.nextNode()){var n=lauf.currentNode,el=n.parentNode.nodeName,k=n.nodeV
 ['aria-label','alt'].forEach(function(a){d.querySelectorAll('['+a+']').forEach(function(e){var k=e.getAttribute(a);if(T[k])attr.push({e:e,a:a,k:k})})});
 var meta=d.querySelector('meta[name=description]'),metaT=meta.content,titelT=d.title,lebenslauf=d.querySelector('.lauf-aktion a[href^=mailto]'),sk=[].slice.call(d.querySelectorAll('.sprachen button'));
 function texte(){knoten.forEach(function(x){x.n.nodeValue=x.s.replace(x.k,ue(x.k))})}
-var hoehen=[].slice.call(d.querySelectorAll('.start>div:first-child,.drei>div,.projekt,.profil,.lauf>div,.kontext,.fenster,footer .rand')),breiten=[].slice.call(d.querySelectorAll('.haupt a,.werdegang-knopf,.aktion .knopf'));
+var hoehen=[].slice.call(d.querySelectorAll('.start>div:first-child,.drei>div,.projekt,.profil,.lauf>div,.lauf-aktion .knopf,.kontext,.fenster,footer .rand')),breiten=[].slice.call(d.querySelectorAll('.haupt a,.werdegang-knopf,.aktion .knopf'));
 function angleichen(){
   var jetzt=sprache,offen=[].slice.call(d.querySelectorAll('.projekt details[open]')),mh=hoehen.map(function(){return 0}),mb=breiten.map(function(){return 0}),b=innerWidth>=600;
   offen.forEach(function(x){x.open=false});
